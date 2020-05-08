@@ -25,7 +25,7 @@ function checkEmail(input){
     if(re.test(input.value.trim())){
         showSuccess(input);
     } else {
-        showError(input, 'Email is not valid');
+        showError(input, 'Email no es válido');
     }
 }
 
@@ -33,7 +33,7 @@ function checkEmail(input){
 function checkRequired(inputArr){
     inputArr.forEach(function(input){
         if(input.value.trim() === ''){
-            showError(input, `${getFieldName(input)} is required`);
+            showError(input, `${getFieldName(input)} es requerido`);
         } else {
             showSuccess(input);
         }
@@ -43,16 +43,16 @@ function checkRequired(inputArr){
 // Check input length
 function checkLength(input, min, max){
     if(input.value.length < min){
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+        showError(input, `${getFieldName(input)} debe tener al menos ${min} caracteres`);
     } else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must less than ${max} characters`)
+        showError(input, `${getFieldName(input)} debe ser de al menos ${max} caracteres`)
     }
 }
 
 // Check passwords match
 function checkPasswordsMatch(input1, input2){
     if (input1.value !== input2.value){
-        showError (input2, 'Passwords do not match');
+        showError (input2, 'Contraseñas no coinciden');
     }
 }
 
